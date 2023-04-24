@@ -60,6 +60,7 @@ namespace CSE412_FinalGroupProject
             this.activityTextbox.ReadOnly = true;
             this.activityTextbox.Size = new System.Drawing.Size(235, 290);
             this.activityTextbox.TabIndex = 1;
+            this.activityTextbox.TabStop = false;
             // 
             // backButton
             // 

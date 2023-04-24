@@ -176,49 +176,49 @@ namespace CSE412_FinalGroupProject
             this.hometownTextbox.Location = new System.Drawing.Point(79, 156);
             this.hometownTextbox.Name = "hometownTextbox";
             this.hometownTextbox.Size = new System.Drawing.Size(254, 20);
-            this.hometownTextbox.TabIndex = 33;
+            this.hometownTextbox.TabIndex = 4;
             // 
             // lnameTextbox
             // 
             this.lnameTextbox.Location = new System.Drawing.Point(79, 130);
             this.lnameTextbox.Name = "lnameTextbox";
             this.lnameTextbox.Size = new System.Drawing.Size(254, 20);
-            this.lnameTextbox.TabIndex = 34;
+            this.lnameTextbox.TabIndex = 3;
             // 
             // fnameTextbox
             // 
             this.fnameTextbox.Location = new System.Drawing.Point(79, 104);
             this.fnameTextbox.Name = "fnameTextbox";
             this.fnameTextbox.Size = new System.Drawing.Size(254, 20);
-            this.fnameTextbox.TabIndex = 35;
+            this.fnameTextbox.TabIndex = 2;
             // 
             // passwordTextbox
             // 
             this.passwordTextbox.Location = new System.Drawing.Point(79, 78);
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.Size = new System.Drawing.Size(254, 20);
-            this.passwordTextbox.TabIndex = 36;
+            this.passwordTextbox.TabIndex = 1;
             // 
             // emailTextbox
             // 
             this.emailTextbox.Location = new System.Drawing.Point(79, 52);
             this.emailTextbox.Name = "emailTextbox";
             this.emailTextbox.Size = new System.Drawing.Size(254, 20);
-            this.emailTextbox.TabIndex = 37;
+            this.emailTextbox.TabIndex = 0;
             // 
             // genderTextbox
             // 
             this.genderTextbox.Location = new System.Drawing.Point(79, 182);
             this.genderTextbox.Name = "genderTextbox";
             this.genderTextbox.Size = new System.Drawing.Size(254, 20);
-            this.genderTextbox.TabIndex = 39;
+            this.genderTextbox.TabIndex = 5;
             // 
             // birthdayTextbox
             // 
             this.birthdayTextbox.Location = new System.Drawing.Point(79, 208);
             this.birthdayTextbox.Name = "birthdayTextbox";
             this.birthdayTextbox.Size = new System.Drawing.Size(254, 20);
-            this.birthdayTextbox.TabIndex = 40;
+            this.birthdayTextbox.TabIndex = 6;
             // 
             // backButton
             // 

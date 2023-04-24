@@ -48,6 +48,9 @@ namespace CSE412_FinalGroupProject
             string comment = commentTextbox.Text;
             this.commentsTableAdapter.insertComment(id, 15, comment, DateTime.Today.ToString());
 
+            int activity = (int)this.usersTableAdapter.getUserActivity(id);
+            this.usersTableAdapter.updateActivity(activity + 1, id);
+
             Main mainPage = new Main(id.ToString());
             mainPage.Show();
             this.Visible = false;

@@ -95,6 +95,9 @@ namespace CSE412_FinalGroupProject
             int photoId = (int)this.photosTableAdapter.countPhotos() + 2;
             this.tagsTableAdapter.insertTag(photoId, id, tags);
             MessageBox.Show("Photo Added");
+
+            int activity = (int)this.usersTableAdapter.getUserActivity(id);
+            this.usersTableAdapter.updateActivity(activity + 1, id);
         }
 
         private void userActivityButton_Click(object sender, EventArgs e)
