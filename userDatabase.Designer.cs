@@ -3904,8 +3904,8 @@ SELECT Id, email, password, birthday, firstname, gender, hometown, lastname FROM
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[8].Connection = this.Connection;
             this._commandCollection[8].CommandText = @"INSERT INTO Users
-                         (email, password, birthday, firstname, gender, hometown, lastname)
-VALUES        (@email,@password,@birthday,@firstname,@gender,@hometown,@lastname);   
+                         (email, password, birthday, firstname, gender, hometown, lastname, userActivity)
+VALUES        (@email,@password,@birthday,@firstname,@gender,@hometown,@lastname, @userActivity);   
 SELECT Id, email, password, birthday, firstname, gender, hometown, lastname FROM Users WHERE (Id = SCOPE_IDENTITY())";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3915,6 +3915,7 @@ SELECT Id, email, password, birthday, firstname, gender, hometown, lastname FROM
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gender", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hometown", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "hometown", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastname", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userActivity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "userActivity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[9].Connection = this.Connection;
             this._commandCollection[9].CommandText = "SELECT        email, password, birthday, firstname, gender, hometown, lastname\nFR" +
@@ -4547,7 +4548,7 @@ SELECT Id, email, password, birthday, firstname, gender, hometown, lastname FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertUser(string email, string password, string birthday, string firstname, string gender, string hometown, string lastname) {
+        public virtual int InsertUser(string email, string password, string birthday, string firstname, string gender, string hometown, string lastname, global::System.Nullable<int> userActivity) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
             if ((email == null)) {
                 throw new global::System.ArgumentNullException("email");
@@ -4590,6 +4591,12 @@ SELECT Id, email, password, birthday, firstname, gender, hometown, lastname FROM
             }
             else {
                 command.Parameters[6].Value = ((string)(lastname));
+            }
+            if ((userActivity.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(userActivity.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
