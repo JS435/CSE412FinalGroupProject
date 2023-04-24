@@ -68,7 +68,8 @@ namespace CSE412_FinalGroupProject
                     this.usersTableAdapter.Update(this.userDatabase.Users);
                     */
 
-                    this.usersTableAdapter.Insert(emailAddress, password, birthday, fname, gender, hometown, lname);
+                    //this.usersTableAdapter.Insert(emailAddress, password, birthday, fname, gender, hometown, lname);
+                    this.usersTableAdapter.InsertUser(emailAddress, password, birthday, fname, gender, hometown, lname, 0);
                     this.userDatabase.AcceptChanges();
                     this.usersTableAdapter.Update(this.userDatabase);
 
